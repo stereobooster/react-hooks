@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import Highlighter from "react-highlight-words";
 
 import hooks from "./hooks.json";
 import Layout from "./Layout";
 import { findHooks, githubName } from "./utils";
+import { useUrlState } from "./useUrlState";
 
 function compare(hookA, hookB) {
   if (hookA.name < hookB.name) return -1;
@@ -56,7 +57,7 @@ const ResultsCount = styled.div`
 `;
 
 const App = () => {
-  const [term, setTerm] = useState("");
+  const [term, setTerm] = useUrlState("search", "");
   const search = term.trim();
   const results = findHooks(search, sortedHooks);
   const tagsToSearch = search === "#" ? ["#"] : [search, search.replace("#", "")];
