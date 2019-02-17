@@ -1294,12 +1294,6 @@
     "importStatement": "import { useOnUnmount } from 'react-hookedup';"
   },
   {
-    "name": "useOnUnmount",
-    "tags": ["Lifecycle"],
-    "repositoryUrl": "https://github.com/zakariaharti/react-hookedup",
-    "importStatement": "import { useOnUnmount } from 'react-hookedup';"
-  },
-  {
     "name": "useMergeState",
     "tags": ["State Management"],
     "repositoryUrl": "https://github.com/zakariaharti/react-hookedup",
@@ -1328,12 +1322,6 @@
     "tags": ["Networl"],
     "repositoryUrl": "https://github.com/zakariaharti/react-hookedup",
     "importStatement": "import { useOnLineStatus } from 'react-hookedup';"
-  },
-  {
-    "name": "useSFControl",
-    "tags": ["Form"],
-    "repositoryUrl": "https://github.com/ckedwards/react-form-stateful",
-    "importStatement": "import { useSFControl } from 'react-form-stateful';"
   },
   {
     "name": "useSFControl",
