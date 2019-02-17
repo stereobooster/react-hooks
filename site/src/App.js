@@ -18,7 +18,6 @@ const sortedHooks = hooks.sort(compare).map((hook, i) => {
   return hook;
 });
 
-console.log(sortedHooks);
 const Hook = styled.div`
   margin-bottom: 3rem;
 `;
