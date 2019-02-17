@@ -13,8 +13,12 @@ function compare(hookA, hookB) {
   return 0;
 }
 
-const sortedHooks = hooks.sort(compare);
+const sortedHooks = hooks.sort(compare).map((hook, i) => {
+  hook.key = i;
+  return hook;
+});
 
+console.log(sortedHooks);
 const Hook = styled.div`
   margin-bottom: 3rem;
 `;
@@ -60,7 +64,8 @@ const App = () => {
   const [term, setTerm] = useUrlState("search", "");
   const search = term.trim();
   const results = findHooks(search, sortedHooks);
-  const tagsToSearch = search === "#" ? ["#"] : [search, search.replace("#", "")];
+  const tagsToSearch =
+    search === "#" ? ["#"] : [search, search.replace("#", "")];
 
   return (
     <Layout>
@@ -82,7 +87,7 @@ const App = () => {
         Found {results.length} {results.length === 1 ? "entry" : "entries"}
       </ResultsCount>
       {results.map(hook => (
-        <Hook key={`${hook.repositoryUrl}-${hook.name}`}>
+        <Hook key={hook.key}>
           <RepositoryLink href={hook.repositoryUrl}>
             <Highlighter
               searchWords={[githubName(search)]}
@@ -105,8 +110,8 @@ const App = () => {
               <Tag
                 key={tag}
                 href={`#${tag}`}
-                onClick={(e) => {
-                  e.preventDefault()
+                onClick={e => {
+                  e.preventDefault();
                   setTerm(`#${tag}`);
                 }}
               >
