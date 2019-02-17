@@ -888,8 +888,8 @@
   {
     "name": "useRedux",
     "tags": ["State Management"],
-    "repositoryUrl": "import { useRedux } from 'use-redux';",
-    "importStatement": "https://github.com/flepretre/use-redux"
+    "repositoryUrl": "https://github.com/flepretre/use-redux",
+    "importStatement": "import { useRedux } from 'use-redux';"
   },
   {
     "name": "useActive",
