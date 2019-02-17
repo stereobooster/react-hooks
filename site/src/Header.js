@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 
 const Header = ({ siteTitle }) => (
   <div
@@ -39,15 +38,15 @@ const Header = ({ siteTitle }) => (
         />
       </svg>
       <h1 style={{ margin: 0, fontWeight: "300" }}>
-        <Link
-          to="/"
+        <a
+          href="/"
           style={{
             color: "white",
             textDecoration: "none"
           }}
         >
           {siteTitle}
-        </Link>
+        </a>
       </h1>
     </div>
   </div>

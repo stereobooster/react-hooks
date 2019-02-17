@@ -13,7 +13,7 @@ script:
 
 deploy:
   provider: pages
-  local-dir: site/public
+  local-dir: site/build
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
   keep-history: true

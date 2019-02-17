@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Highlighter from "react-highlight-words";
 
-import hooks from "../../../hooks.json";
-import Layout from "../components/layout";
-import { findHooks, githubName } from "../utils";
+import hooks from "./hooks.json";
+import Layout from "./Layout";
+import { findHooks, githubName } from "./utils";
 
 function compare(hookA, hookB) {
   if (hookA.name < hookB.name) return -1;
@@ -55,7 +55,7 @@ const ResultsCount = styled.div`
   margin-bottom: 3rem;
 `;
 
-const IndexPage = () => {
+const App = () => {
   const [term, setTerm] = useState("");
   const search = term.trim();
   const results = findHooks(search, sortedHooks);
@@ -123,4 +123,4 @@ const IndexPage = () => {
   );
 };
 
-export default IndexPage;
+export default App;

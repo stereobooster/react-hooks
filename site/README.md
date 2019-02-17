@@ -7,7 +7,7 @@ yarn
 ## Develop
 
 ```
-yarn develop
+yarn start
 ```
 
 ## Travis Status
