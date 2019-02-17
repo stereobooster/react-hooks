@@ -84,14 +84,14 @@ const IndexPage = () => {
         <Hook key={`${hook.repositoryUrl}-${hook.name}`}>
           <RepositoryLink href={hook.repositoryUrl}>
             <Highlighter
-              searchWords={[term]}
+              searchWords={[githubName(search)]}
               autoEscape={true}
               textToHighlight={githubName(hook.repositoryUrl)}
             />
           </RepositoryLink>
           <Name>
             <Highlighter
-              searchWords={[term]}
+              searchWords={[search]}
               autoEscape={true}
               textToHighlight={hook.name}
             />
