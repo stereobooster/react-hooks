@@ -2,6 +2,7 @@
   "name": "react-hooks-cra",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://stereobooster.github.io/react-hooks/",
   "dependencies": {
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
