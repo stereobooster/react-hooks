@@ -59,7 +59,7 @@ const IndexPage = () => {
   const [term, setTerm] = useState("");
   const search = term.trim();
   const results = findHooks(search, sortedHooks);
-  const tagsToSearch = search === "#" ? ["#"] : [search.replace("#", "")];
+  const tagsToSearch = search === "#" ? ["#"] : [search, search.replace("#", "")];
 
   return (
     <Layout>
