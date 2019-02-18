@@ -6,6 +6,7 @@ import hooks from "./hooks.json";
 import Layout from "./Layout";
 import { findHooks, githubName } from "./utils";
 import { useUrlState } from "./useUrlState";
+import { base85 } from "./base85.js";
 
 function compare(hookA, hookB) {
   if (hookA.name < hookB.name) return -1;
@@ -14,7 +15,7 @@ function compare(hookA, hookB) {
 }
 
 const sortedHooks = hooks.sort(compare).map((hook, i) => {
-  hook.key = i;
+  hook.key = base85(i);
   return hook;
 });
 
